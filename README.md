@@ -1,4 +1,4 @@
-## Predicting Unplanned Hospital Readmissions Using Natural Language Processing: A MIMIC-III Case Study
+## Predicting Unplanned Hospital Readmissions \\ Using Natural Language Processing
 
 ### Benjamin Fulton, Dinesh Kasti, Sahibjit Ranu, Jun Zhao
 
