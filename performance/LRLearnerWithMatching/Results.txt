@@ -1,0 +1,157 @@
+Loading MIMIC data:
+  PATIENTS.csv
+  ADMISSIONS.csv
+  NOTEEVENTS.csv
+  Completed in 3.0 seconds
+
+Parsing admissions:
+  58,976 admissions records
+  45,359 admissions (filtering out newborns and dead before discharge) in 32 partitions
+  10,787 of those were unplanned readmissions
+  2,944 of those unplanned readmissions were in <30 days
+  Completed in 14.7 seconds
+
+Parsing notes:
+  1,851,344 total notes
+  52,726 discharge memos (1 combined note per person) in 32 partitions
+  Completed in 84.5 seconds
+
+Merging and reducing:
+  Completed in 0.1 seconds
+
+Saving data:
+  combined.parquet
+  Completed in 136.8 seconds
+
+Saving data:
+  combined.csv
+  Completed in 68.4 seconds
+
+Loading data:
+  combined.parquet
+  Completed in 0.2 seconds
+
+Preparing the featurizer:
+  Completed in 179.8 seconds
+
+Featurizing the training data:
+  Completed in 0.1 seconds
+
+Featurizing the testing data:
+  Completed in 0.1 seconds
+
+Saving data:
+  train.parquet
+  Completed in 199.3 seconds
+
+Saving data:
+  test.parquet
+  Completed in 41.9 seconds
+
+Saving data:
+  feature_map.parquet
+  Completed in 0.2 seconds
+
+Saving data:
+  train.csv
+  Completed in 216.2 seconds
+
+Saving data:
+  test.csv
+  Completed in 57.4 seconds
+
+Saving data:
+  feature_map.csv
+  Completed in 0.1 seconds
+
+Loading data:
+  train.parquet
+  Completed in 0.1 seconds
+
+Loading data:
+  test.parquet
+  Completed in 0.1 seconds
+
+Loading data:
+  feature_map.parquet
+  Completed in 0.1 seconds
+
+Balancing the training data:
+  2,469 positive training items (chosen from 2,469)
+  2,488 negative training items (chosen from 34,895)
+  4,957 total training items
+  Completed in 29.3 seconds
+
+Training the model:
+  Completed in 26.3 seconds
+
+Making training predictions:
+  Completed in 9.1 seconds
+
+Evaluating training predictions:
+  Confusion matrix:
+              pred_0   pred_1
+     true_0    2,114      374
+     true_1      537    1,932
+  Accuracy: 0.816
+  Precision:
+    Label 0: 0.797
+    Label 1: 0.838
+    Overall: 0.818
+  Recall:
+    Label 0: 0.850
+    Label 1: 0.783
+    Overall: 0.816
+  F-score:
+    Label 0: 0.823
+    Label 1: 0.809
+    Overall: 0.816
+  AUROC (currently only label_1 works):
+    Label 0: 0.099
+    Label 1: 0.901
+  Completed in 23.3 seconds
+
+Saving data:
+  predictions_train.csv
+  Completed in 22.0 seconds
+
+Saving trained model:
+  ../models/LRLearner
+  Completed in 0.3 seconds
+
+Saving data:
+  feature_importance.csv
+  Completed in 0.3 seconds
+
+Making testing predictions:
+  Completed in 0.6 seconds
+
+Evaluating testing predictions:
+  Confusion matrix:
+              pred_0   pred_1
+     true_0    4,174    1,951
+     true_1      152      265
+  Accuracy: 0.679
+  Precision:
+    Label 0: 0.965
+    Label 1: 0.120
+    Overall: 0.911
+  Recall:
+    Label 0: 0.681
+    Label 1: 0.635
+    Overall: 0.679
+  F-score:
+    Label 0: 0.799
+    Label 1: 0.201
+    Overall: 0.761
+  AUROC (currently only label_1 works):
+    Label 0: 0.292
+    Label 1: 0.708
+  Completed in 5.3 seconds
+
+Saving data:
+  predictions_test.csv
+  Completed in 1.7 seconds
+
+Generating charts:
+  File "../data/validate_predictions.csv" not found. Skipping.  Graphics saved to ../graphics/

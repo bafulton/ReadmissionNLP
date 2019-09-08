@@ -1,0 +1,91 @@
+Loading data:
+  train.parquet
+  Completed in 3.3 seconds
+
+Loading data:
+  test.parquet
+  Completed in 0.1 seconds
+
+Loading data:
+  feature_map.parquet
+  Completed in 0.1 seconds
+
+Balancing the training data:
+  2,469 positive training items (chosen from 2,469)
+  2,488 negative training items (chosen from 34,895)
+  4,957 total training items
+  Completed in 30.8 seconds
+
+Training the model:
+  Completed in 69.6 seconds
+
+Making training predictions:
+  Completed in 9.2 seconds
+
+Evaluating training predictions:
+  Confusion matrix:
+              pred_0   pred_1
+     true_0    2,033      455
+     true_1      812    1,657
+  Accuracy: 0.744
+  Precision:
+    Label 0: 0.715
+    Label 1: 0.785
+    Overall: 0.749
+  Recall:
+    Label 0: 0.817
+    Label 1: 0.671
+    Overall: 0.744
+  F-score:
+    Label 0: 0.762
+    Label 1: 0.723
+    Overall: 0.743
+  AUROC (currently only label_1 works):
+    Label 0: 0.186
+    Label 1: 0.814
+  Completed in 19.9 seconds
+
+Saving data:
+  predictions_train.csv
+  Completed in 20.1 seconds
+
+Saving trained model:
+  ../models/GBTLearnerWithMatching
+  Completed in 1.1 seconds
+
+Saving data:
+  feature_importance.csv
+  Completed in 0.6 seconds
+
+Making testing predictions:
+  Completed in 2.9 seconds
+
+Evaluating testing predictions:
+  Confusion matrix:
+              pred_0   pred_1
+     true_0    4,136    1,989
+     true_1      211      206
+  Accuracy: 0.664
+  Precision:
+    Label 0: 0.951
+    Label 1: 0.094
+    Overall: 0.897
+  Recall:
+    Label 0: 0.675
+    Label 1: 0.494
+    Overall: 0.664
+  F-score:
+    Label 0: 0.790
+    Label 1: 0.158
+    Overall: 0.750
+  AUROC (currently only label_1 works):
+    Label 0: 0.371
+    Label 1: 0.629
+  Completed in 5.5 seconds
+
+Saving data:
+  predictions_test.csv
+  Completed in 3.0 seconds
+
+Generating charts:
+  File "../data/validate_predictions.csv" not found. Skipping.  Graphics saved to ../graphics/
